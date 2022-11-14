@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       
 
-      <button disabled={!store.data.loading ? true : false} onClick={() => dispatch(dogApi())}>add</button>
+      <button disabled={store.data.loading ? true : false} onClick={() => dispatch(dogApi())}>add</button>
 
       <img src={store.data.image} alt="" />
     </div>
