@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import  { dogApi } from "./store/storeSlice";
+
+import { useSelector,useDispatch } from "react-redux";
+
+
+
 
 function App() {
+  
+  const dispatch = useDispatch()
+
+  const store = useSelector((state) => state.store);
+  console.log(store)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+
+      <button disabled={!store.data.loading ? true : false} onClick={() => dispatch(dogApi())}>add</button>
+
+      <img src={store.data.image} alt="" />
     </div>
   );
 }
