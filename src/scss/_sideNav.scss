@@ -1,0 +1,26 @@
+.side{
+    border: 1px solid orange;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 8vh;
+    width: 20%;
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        li{
+            border-top: 1px solid orange;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+
+
+            a{
+                font-weight: bold;
+                font-size: 24px;
+                
+            }
+        }
+    }
+}

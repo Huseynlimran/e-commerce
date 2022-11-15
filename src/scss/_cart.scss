@@ -1,0 +1,36 @@
+.container {
+
+
+
+    .cartWrapper{
+        padding-top: 160px;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        .cartCard{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 0 30px rgba(230, 230, 230, 0.541);
+            padding: 30px;
+
+            img{
+                width:200px;
+            }
+            button{
+                background-color: transparent;
+                border: 1px solid $brand;
+                color: $brand;
+                cursor: pointer;
+                padding: 10px 30px;
+                border-radius: 5px;
+                transition: all .4s;
+                &:hover{
+                    color: white;
+                    background-color: $brand;
+                }
+            }
+        }
+    }
+}

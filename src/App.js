@@ -1,24 +1,24 @@
-import  { dogApi } from "./store/storeSlice";
-
-import { useSelector,useDispatch } from "react-redux";
-
-
-
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Nav from "./components/Nav";
+import Cart from "./pages/Cart";
+import Home from "./pages/Home";
 
 function App() {
-  
-  const dispatch = useDispatch()
 
-  const store = useSelector((state) => state.store);
-  console.log(store)
 
   return (
     <div className="App">
-      
+      <BrowserRouter>
+      <Nav />
+      <Routes>
+        <Route>
+          <Route path="/" element={<Home />}></Route>
 
-      <button disabled={store.data.loading ? true : false} onClick={() => dispatch(dogApi())}>add</button>
+          <Route path="/cart" element={<Cart />}></Route>
 
-      <img src={store.data.image} alt="" />
+        </Route>
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }

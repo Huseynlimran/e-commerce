@@ -1,0 +1,43 @@
+// Container & breakpoints
+@use 'sass:math';
+$containerWidth:1476;
+$containerPadding:40;
+$containerSidePadding: math.div($containerPadding, 2);
+$breakpoint1200:1119.98 + px;
+$breakpoint992:991.98 + px;
+$breakpoint768:767.98 + px;
+$breakpoint480:479.98 + px;
+
+@media(max-width: $breakpoint1200){
+
+}
+
+@media(max-width: $breakpoint992){
+
+}
+
+@media(max-width: $breakpoint768){
+
+}
+
+@media(max-width: $breakpoint480){
+
+}
+
+
+*{
+    font-family: 'Plus Jakarta Sans';
+    box-sizing: border-box;
+}
+body{
+    background-color: white;;
+}
+
+//Fonts 
+
+// Colors
+$brand:orange;
+$gray:#ffffff85;
+$black:#000000;
+$purple:#B861FF;
+
