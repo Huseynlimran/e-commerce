@@ -1,6 +1,4 @@
 import React from 'react';
-import { FiShoppingBag } from 'react-icons/fi';
-import { BsBookmarkHeartFill } from 'react-icons/bs';
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
