@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useDispatch,useSelector } from "react-redux";
 import { add } from "../store/cartSlice";
-import { FETCH, fetchProducts } from "../store/productSlice";
+import {  fetchProducts } from "../store/productSlice";
 
 const Products = () => {
 
@@ -9,7 +9,7 @@ const Products = () => {
 
   const dispatch = useDispatch();
 
-  const {data: products ,status} = useSelector(state => state.product)
+  const {data: products} = useSelector(state => state.product)
 
   // const [products, setProducts] = useState([]);
 
@@ -24,17 +24,13 @@ const Products = () => {
     //     .then((data) => setProducts(data));
     // };
     // fetchProducts();
-  }, []);
+  });
 
   const handleAdd = (product) => {
     dispatch(add(product))
   }
 
-  if(status === FETCH.LOADING){
-
-    return <h2>Loading...</h2>
-    }
-
+ 
   return (
     <div className="container">
       <div className="productsWrapper">
@@ -42,7 +38,7 @@ const Products = () => {
           <div className="card" key={product.id}>
               <img src={product.image} alt="img" />
             <h4>{product.title}</h4>
-            <h3>{product.price}  <span> $</span> </h3>
+            <h3>{product.price} <span> $</span> </h3>
             <button className="btn" onClick={() => handleAdd(product)}>Add To Cart</button>
           </div>
         ))}
