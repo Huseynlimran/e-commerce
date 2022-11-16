@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import { BiShoppingBag } from "react-icons/bi";
 
 const Navbar = () => {
   const items = useSelector((state) => state.cart);
@@ -12,10 +13,10 @@ const Navbar = () => {
           <Link className="navLink" to="/">
             Home
           </Link>
-          <Link className="navLink" to="/cart">
-            Cart
+          <Link to="/cart" className="cartCount">
+            <BiShoppingBag />
+            <span>{items.length}</span>
           </Link>
-          <span className="cartCount">Cart items: {items.length}</span>
         </div>
       </nav>
     </header>

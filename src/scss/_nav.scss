@@ -1,62 +1,70 @@
-header{
-    background-color: rgba(230, 230, 230, 0.363);
-    height: 8vh;
+header {
+  background-color: rgba(230, 230, 230, 0.363);
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  nav {
     display: flex;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    nav{
+    justify-content: space-between;
+    width: 100%;
+    .navlinks {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 25px;
+      font-size: 24px;
+      color: $brand;
+      font-weight: bold;
+      @media (max-width: 515px) {
+        width: 60%;
+      }
+      .itemsCounter {
+        color: black;
+      }
+      .cartCount{
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        width: 100%;
-        .navlinks{
-            display: flex;
-            align-items: center;
-            gap: 25px;
-            font-size: 24px;
+        gap: 5px;
+        position: relative;
+        color: black;
+        span{
+            position: absolute;
+            top: -14px;
+            right: -9px;
             color: $brand;
-            font-weight: bold;
-            .itemsCounter{
-                color: black;
-            }
-            .navLink{
-                font-weight: normal;
-                color: black;
-            transition: all .4s;
+        }
+      }
+      .navLink {
+        font-weight: normal;
+        color: black;
+        transition: all 0.4s;
+        @media (max-width: 515px) {
+            font-size: 26px;
+          }
+        
 
-                &:hover{
-                   color: $brand;
-                }
-            }
+        &:hover {
+          color: $brand;
         }
-
-        .logo{
-            font-weight: bold;
-            color: orange;
-            font-size: 34px;
-            span{
-                color: black;
-            }
-        }
-        ul{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-            li{
-                a{
-                    font-size: 26px;
-                    color: rgb(0, 0, 0);
-                    transition: all .4s;
-                    &:hover{
-                        color: orange;
-                    }
-                }
-            }
-        }
+      }
     }
+
+    .logo {
+      font-weight: bold;
+      color: orange;
+      font-size: 34px;
+      span {
+        color: black;
+      }
+      @media (max-width: 515px) {
+        font-size: 26px;
+      }
+    }
+  }
 }
