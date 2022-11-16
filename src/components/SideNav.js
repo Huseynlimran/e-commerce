@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 const SideNav = () => {
-  const [data, setData] = useState("");
+  // const [data, setData] = useState("");
 
-  useEffect(() => {
-    fetch('https://fakestoreapi.com/products/categories')
-            .then(res=>res.json())
-            .then(data=>{
-                setData(data)
-            })
-  },[]);
+  // useEffect(() => {
+  //   fetch('https://fakestoreapi.com/products/categories')
+  //           .then(res=>res.json())
+  //           .then(data=>{
+  //               setData(data)
+  //           })
+  // },[]);
 
   return (
     <div className="side">
-      <ul>
+      {/* <ul>
         <li>
           <a href="/" onClick={(e)=>e.preventDefault()}>{data[0]}</a>
         </li>
@@ -26,7 +26,7 @@ const SideNav = () => {
         <li>
           <a href="/">{data[3]}</a>
         </li>
-      </ul>
+      </ul> */}
     </div>
   );
 };
