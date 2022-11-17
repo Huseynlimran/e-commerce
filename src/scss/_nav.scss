@@ -37,7 +37,12 @@ header {
             position: absolute;
             top: -14px;
             right: -9px;
-            color: $brand;
+            color: white;
+            background-color: $brand;
+            padding: 4px;
+            border-radius: 400px;
+            font-size: 18px;
+            z-index: -1;
         }
       }
       .navLink {
