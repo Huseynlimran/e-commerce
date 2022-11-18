@@ -11,6 +11,7 @@
   }
 
   .card {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -30,6 +31,20 @@
       flex: 0 1 49%;
     }
 
+    .rating{
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      color: white;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      background-color: $brand;
+      height: 30px;
+      padding: 5px;
+      border-radius: 20px 0px 0px 20px;
+    }
+
     h4{
       @media (max-width: 746px) {
         font-size: 16px;
@@ -46,10 +61,11 @@
 
 
     img {
-       width:100%;
+       width:200px;
        height: auto;
+       object-fit: cover;
        @media (max-width: 746px) {
-        width: 90px;
+        width: 100px;
       }
     }
     button {

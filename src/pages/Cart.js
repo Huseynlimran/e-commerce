@@ -1,6 +1,8 @@
 import React from 'react'
 import { useSelector,useDispatch } from 'react-redux'
 import { remove } from '../store/cartSlice'
+import { useAutoAnimate } from "@formkit/auto-animate/react";
+
 
 
 const Cart = () => {
@@ -14,9 +16,11 @@ const Cart = () => {
 
   }
 
+  const [animationParent] = useAutoAnimate();
+
   return (
     <div className='container'>
-      <div className="cartWrapper">
+      <div className="cartWrapper" ref={animationParent} >
 
         {
 
