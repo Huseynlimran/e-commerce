@@ -2,13 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { fetchProducts } from "../store/productSlice";
-import Products from "./Products";
+// import Products from "./Products";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
+import Category from "./Category";
 
 const SideNav = () => {
+  
   const [category, setCategory] = useState([]);
   const [title, setTitle] = useState("");
-
   const [active, setActive] = useState(null);
 
   const dispatch = useDispatch();
@@ -23,6 +24,13 @@ const SideNav = () => {
   //               setData(data)
   //           })
   // },[]);
+  useEffect(() => {
+
+    dispatch(fetchProducts());
+
+    // products.map((getcate) => setData(getcate));
+  }, [dispatch]);
+
 
   useEffect(() => {
     fetch("https://fakestoreapi.com/products/categories")
@@ -31,21 +39,17 @@ const SideNav = () => {
         setCategory(item);
       });
 
-    dispatch(fetchProducts());
 
     // products.map((getcate) => setData(getcate));
-  }, [dispatch]);
+  }, []);
+
+  const [animationParent] = useAutoAnimate();
 
   const categoryTo = (item) => {
     // e.preventDefault();
     setTitle(item);
     setActive(item);
-
-    // if(data.category === item) {
-    //   return <div>Salam</div>
-    // }
   };
-  const [animationParent] = useAutoAnimate();
 
   return (
     <section className="sidenav" ref={animationParent}>
@@ -53,7 +57,6 @@ const SideNav = () => {
         <ul>
           {category.map((item) => (
             <Link
-              
               className={`${active === item && "active"}`}
               key={Math.random()}
               onClick={() => categoryTo(item)}
@@ -70,7 +73,7 @@ const SideNav = () => {
         <h3>Products</h3>
       </div>
 
-      <Products links={title} />
+      <Category links={title} />
     </section>
   );
 };
