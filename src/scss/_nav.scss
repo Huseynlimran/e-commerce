@@ -1,5 +1,7 @@
 header {
-  background-color: rgba(230, 230, 230, 0.363);
+  background-color: rgba(0, 0, 0, 0.74);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   height: 8vh;
   display: flex;
   align-items: center;
@@ -25,20 +27,20 @@ header {
         width: 60%;
       }
       .itemsCounter {
-        color: black;
+        color: white;
       }
       .cartCount{
         display: flex;
         align-items: center;
         gap: 5px;
         position: relative;
-        color: black;
+        color: white;
         span{
             position: absolute;
             top: -14px;
             right: -9px;
-            color: white;
-            background-color: $brand;
+            color: $brand;
+            background-color: white;
             padding: 4px;
             border-radius: 400px;
             font-size: 18px;
@@ -47,7 +49,7 @@ header {
       }
       .navLink {
         font-weight: normal;
-        color: black;
+        color: white;
         transition: all 0.4s;
         @media (max-width: 515px) {
             font-size: 26px;
@@ -62,10 +64,11 @@ header {
 
     .logo {
       font-weight: bold;
-      color: orange;
+      color: white;
       font-size: 34px;
+      
       span {
-        color: black;
+        color: white;
       }
       @media (max-width: 515px) {
         font-size: 26px;

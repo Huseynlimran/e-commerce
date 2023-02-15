@@ -5,6 +5,7 @@ import { fetchProducts } from "../store/productSlice";
 // import Products from "./Products";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import Category from "./Category";
+import Slider from "./Slider";
 
 const SideNav = () => {
   
@@ -72,6 +73,7 @@ const SideNav = () => {
 
         <h3>Products</h3>
       </div>
+      <Slider />
 
       <Category links={title} />
     </section>

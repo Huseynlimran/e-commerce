@@ -37,7 +37,7 @@
       justify-content: space-around;
     }
     .active{
-      color: black;
+      color: orange;
     }
     a {
       display: flex;
@@ -47,7 +47,7 @@
       color: $brand;
       transition: all .4s;
       &:hover{
-        color: black;
+        color: orange;
       }
       @media (max-width: 600px) {
         padding: 0px;
