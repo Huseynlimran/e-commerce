@@ -1,7 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { add } from "../store/cartSlice";
-import { fetchProducts } from "../store/productSlice";
 import { AiFillStar } from "react-icons/ai";
 
 const Defaultproducts = () => {

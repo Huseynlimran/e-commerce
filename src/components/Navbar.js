@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { BiShoppingBag } from "react-icons/bi";
-import SideNav from "./SideNav";
 
 const Navbar = () => {
   const items = useSelector((state) => state.cart);
