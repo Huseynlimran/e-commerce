@@ -23,10 +23,9 @@ const Cart = () => {
       <div className="cartWrapper" ref={animationParent} >
 
         {
-
           products.map(product => (
             <div className="cartCard" key={product.id}>
-              <img src={product.image} alt="" />
+              <img src={product.category.image} alt="" />
 
               <h5>{product.title}</h5>
               <h5>{product.price}$</h5>

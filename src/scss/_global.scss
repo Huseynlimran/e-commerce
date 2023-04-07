@@ -30,14 +30,15 @@ $breakpoint480:479.98 + px;
     box-sizing: border-box;
 }
 body{
-    background-color: white;;
+    background-color: rgba(212, 212, 212, 0.616);;
 }
 
 //Fonts 
+$brandFont:'Inter', sans-serif;
 
 // Colors
 $brand:black;
-$gray:#ffffff85;
+$second:#ffffff;
 $black:#000000;
 $purple:#B861FF;
 

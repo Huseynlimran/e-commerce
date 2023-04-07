@@ -10,12 +10,12 @@ const cartSlice = createSlice({
         popupOpen(state, action) {
             state.push(action.payload)
         },
-        remove(state, action) {
+        popupClose(state, action) {
             return state.filter(item => item.id !== action.payload)
         }
     }
 })
 
-export const {popupOpen, remove} = cartSlice.actions;
+export const {popupOpen, popupClose } = cartSlice.actions;
 
 export default cartSlice.reducer;

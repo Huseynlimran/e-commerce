@@ -5,7 +5,6 @@ import { fetchProducts } from "../store/productSlice";
 // import Products from "./Products";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import Category from "./Category";
-import Slider from "./Slider";
 
 const SideNav = () => {
   
@@ -34,7 +33,7 @@ const SideNav = () => {
 
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products/categories")
+    fetch("https://api.escuelajs.co/api/v1/products")
       .then((res) => res.json())
       .then((item) => {
         setCategory(item);
@@ -48,7 +47,7 @@ const SideNav = () => {
 
   const categoryTo = (item) => {
     // e.preventDefault();
-    setTitle(item);
+    setTitle(item.category.name);
     setActive(item);
   };
 
@@ -58,12 +57,14 @@ const SideNav = () => {
         <ul>
           {category.map((item) => (
             <Link
+            
               className={`${active === item && "active"}`}
               key={Math.random()}
               onClick={() => categoryTo(item)}
             >
-              {item}
+              {item.category.name}
             </Link>
+            
           ))}
         </ul>
       </div>
@@ -73,7 +74,6 @@ const SideNav = () => {
 
         <h3>Products</h3>
       </div>
-      <Slider />
 
       <Category links={title} />
     </section>
