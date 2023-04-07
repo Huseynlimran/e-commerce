@@ -14,7 +14,7 @@ const Navbar = () => {
             Home
           </Link>
           <Link to="/cart" className="cartCount">
-            <BiShoppingBag />
+            <BiShoppingBag className="icon" />
             <span>{items.length}</span>
           </Link>
         </div>

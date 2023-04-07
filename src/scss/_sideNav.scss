@@ -1,6 +1,5 @@
-
-.sidenav{
-  .heading{
+.sidenav {
+  .heading {
     margin-top: 20px;
     display: flex;
     align-items: center;
@@ -8,24 +7,23 @@
     flex-direction: column;
     gap: 10px;
     width: 100%;
-    h1{
+    h1 {
       font-size: 26px;
-      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
     }
-    h3{
+    h3 {
       font-size: 26px;
       color: $brand;
     }
   }
 }
 
-
 .side {
   margin-top: 10vh;
   display: flex;
   align-items: center;
   justify-content: center;
- 
   ul {
     display: flex;
     align-items: center;
@@ -36,8 +34,8 @@
       padding: 20px 0px;
       justify-content: space-around;
     }
-    .active{
-      color: orange;
+    .active {
+      color:rgb(110, 223, 100);
     }
     a {
       display: flex;
@@ -45,9 +43,9 @@
       padding: 10px;
       font-size: 20px;
       color: $brand;
-      transition: all .4s;
-      &:hover{
-        color: orange;
+      transition: all 0.4s;
+      &:hover {
+        color: gray;
       }
       @media (max-width: 600px) {
         padding: 0px;

@@ -1,4 +1,5 @@
 header {
+  background-color: white;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   height: 8vh;
@@ -33,13 +34,14 @@ header {
         align-items: center;
         gap: 5px;
         position: relative;
-        color: white;
+        color: $second;
+        font-family: $brandFont;
         span{
             position: absolute;
             top: -14px;
             right: -9px;
             color: $brand;
-            background-color: white;
+            background-color: transparent;
             padding: 4px;
             border-radius: 400px;
             font-size: 18px;
@@ -48,8 +50,9 @@ header {
       }
       .navLink {
         font-weight: normal;
-        color: white;
+        color: $brand;
         transition: all 0.4s;
+        font-family: $brandFont;
         @media (max-width: 515px) {
             font-size: 26px;
           }
@@ -61,10 +64,15 @@ header {
       }
     }
 
+    .icon{
+      color: $brand;
+    }
+
     .logo {
       font-weight: bold;
-      color: white;
+      color: $brand;
       font-size: 34px;
+      font-family: $brandFont;
       
       span {
         color: white;

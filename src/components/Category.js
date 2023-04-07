@@ -22,7 +22,7 @@ const Category = ({ links }) => {
 
   
   return (
-    <div className="container">
+    <div className="container" id="category">
       <div className="productsWrapper" ref={animationProduct}>
         {products.map(
           (product) =>
