@@ -1,7 +1,7 @@
 .productsWrapper {
   padding-top: 50px;
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 15px;
@@ -11,22 +11,23 @@
   }
 
   .card {
+    border-radius: 15px;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    flex: 1 0 20%;
+    justify-content: stretch;
+    flex: 1 1 20%;
     text-align: center;
-    padding-bottom: 20px;
+    padding: 15px;
     overflow: hidden;
     gap: 15px;
     cursor: pointer;
-    transition:all 0.4s;
+    transition: all 0.4s;
     box-shadow: 0 0 45px rgba(204, 204, 204, 0.308);
     &:hover {
       box-shadow: 0 0 105px rgba(148, 148, 148, 0.596);
-      button{
+      button {
         transform: translateY(0%);
       }
     }
@@ -66,16 +67,20 @@
       }
       font-family: $brandFont;
     }
-
+    .imagediv {
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
     img {
-      width: 100%;
-      height: auto;
+      width: 200px;
+      height: 200px;
       @media (max-width: 746px) {
         width: 100%;
       }
     }
-   
-    
+
     button {
       background-color: $brand;
       color: $second;
@@ -87,7 +92,7 @@
       transform: translateY(200%);
       cursor: pointer;
       transition: all 0.4s;
-       &:hover {
+      &:hover {
         background-color: transparent;
         color: $brand;
       }
@@ -99,5 +104,9 @@
   p {
     padding: 0px 20px;
     font-family: $brandFont;
+    width: 300px;
+    overflow: hidden;
+    height: 50px;
+    line-height: 50px;
   }
 }

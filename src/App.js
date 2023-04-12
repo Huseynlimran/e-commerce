@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import SideNav from "./components/SideNav";
 import Cart from "./pages/Cart";
 import Home from "./components/Home";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<SideNav />}></Route>
           <Route path="/cart" element={<Cart />}></Route>
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );

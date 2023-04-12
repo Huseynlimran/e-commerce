@@ -7,7 +7,6 @@ import { useAutoAnimate } from "@formkit/auto-animate/react";
 import Category from "./Category";
 
 const SideNav = () => {
-  
   const [category, setCategory] = useState([]);
   const [title, setTitle] = useState("");
   const [active, setActive] = useState(null);
@@ -25,29 +24,28 @@ const SideNav = () => {
   //           })
   // },[]);
   useEffect(() => {
-
     dispatch(fetchProducts());
 
     // products.map((getcate) => setData(getcate));
   }, [dispatch]);
 
-
   useEffect(() => {
-    fetch("https://api.escuelajs.co/api/v1/products")
+    fetch("https://fakestoreapi.com/products/categories")
       .then((res) => res.json())
       .then((item) => {
         setCategory(item);
       });
 
-
     // products.map((getcate) => setData(getcate));
   }, []);
+
+
 
   const [animationParent] = useAutoAnimate();
 
   const categoryTo = (item) => {
     // e.preventDefault();
-    setTitle(item.category.name);
+    setTitle(item);
     setActive(item);
   };
 
@@ -57,14 +55,12 @@ const SideNav = () => {
         <ul>
           {category.map((item) => (
             <Link
-            
               className={`${active === item && "active"}`}
               key={Math.random()}
               onClick={() => categoryTo(item)}
             >
-              {item.category.name}
+              {item}
             </Link>
-            
           ))}
         </ul>
       </div>
